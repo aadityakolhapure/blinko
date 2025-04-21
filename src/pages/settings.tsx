@@ -70,14 +70,14 @@ export const allSettings: SettingItem[] = [
     requireAdmin: true,
     keywords: ['ai', 'artificial intelligence', '人工智能'],
   },
-  {
-    key: 'httpproxy',
-    title: ('http-proxy'),
-    icon: 'mdi:connection',
-    component: <HttpProxySetting />,
-    requireAdmin: true,
-    keywords: ['proxy', 'http', 'connection', '代理', 'HTTP代理'],
-  },
+  // {
+  //   key: 'httpproxy',
+  //   title: ('http-proxy'),
+  //   icon: 'mdi:connection',
+  //   component: <HttpProxySetting />,
+  //   requireAdmin: true,
+  //   keywords: ['proxy', 'http', 'connection', '代理', 'HTTP代理'],
+  // },
   {
     key: 'task',
     title: ('schedule-task'),
@@ -187,7 +187,7 @@ const Page = observer(() => {
   }));
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col shadow-sm hover:shadow-md transition-all duration-300 ease-in-out">
       <div className="sticky top-0 z-10 w-full">
         <div className="md:max-w-[980px] md:-translate-x-[3px] mx-3 md:mx-auto backdrop-blur-md bg-background rounded-2xl">
           <ScrollableTabs items={tabItems} selectedKey={selected} onSelectionChange={setSelected} color="primary" />

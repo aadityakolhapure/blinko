@@ -43,9 +43,9 @@ export const AboutSetting = observer(() => {
       title={t('about')}
     >
       <div className="flex items-start space-x-4 mb-6">
-        <Image src="/logo.svg" alt="Blinko" className="w-16 h-16 rounded-xl" />
+        {/* TODO <Image src="/logo.svg" alt="Blinko" className="w-16 h-16 rounded-xl" /> */}
         <div>
-          <h2 className="text-xl font-semibold">Blinko</h2>
+          <h2 className="text-xl font-semibold">Brainwave</h2>
           <div className="flex items-center gap-2 mt-1">
             {/* <span className="px-2 py-1 bg-gray-100 text-gray-500 rounded-md text-xs">
               v{store.version.value}
@@ -68,7 +68,7 @@ export const AboutSetting = observer(() => {
                 size="sm"
                 className="cursor-pointer"
                 onClick={() => {
-                  window.open(`https://github.com/blinko-space/blinko/releases`, '_blank')
+                  window.open(`https://github.com/aadityakolhapure`, '_blank')
                 }}
               >
                 {t('new-version-available')}: v{store.latestVersion.value}
@@ -84,12 +84,12 @@ export const AboutSetting = observer(() => {
           leftContent={<>GitHub</>}
           rightContent={
             <Link
-              href="https://github.com/blinko-space/blinko"
+              href="https://github.com/aadityakolhapure"
               target="_blank"
               className="text-primary flex items-center gap-1"
             >
               <Icon icon="mdi:github" width="20" />
-              blinko-space/blinko
+              brainwave/project
             </Link>
           }
         />
@@ -97,16 +97,16 @@ export const AboutSetting = observer(() => {
           leftContent={<>Discord</>}
           rightContent={
             <Link
-              href="https://discord.gg/e5UdKX7w"
+              href="https://discord.com"
               target="_blank"
               className="text-primary flex items-center gap-1"
             >
               <Icon icon="mdi:discord" width="20" />
-              Blinko Community
+              brainwave Community
             </Link>
           }
         />
-        <Item
+        {/* <Item
           leftContent={<>Telegram</>}
           rightContent={
             <Link
@@ -118,7 +118,7 @@ export const AboutSetting = observer(() => {
               @blinko
             </Link>
           }
-        />
+        /> */}
 
       </div>
     </CollapsibleCard>

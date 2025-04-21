@@ -27,7 +27,7 @@ export default function _Document(props: DocumentProps) {
 
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <title>Blinko</title>
+        <title>Brainwave</title>
 
         <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff"/>
       </Head>

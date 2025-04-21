@@ -31,7 +31,7 @@ const Home = observer(() => {
       style={{
         maxWidth: blinko.config.value?.maxHomePageWidth ? `${blinko.config.value?.maxHomePageWidth}px` : '100%'
       }}
-      className={`md:p-0 relative h-full flex flex-col-reverse md:flex-col mx-auto`}>
+      className={`md:p-0 relative h-full flex flex-col-reverse md:flex-col mx-auto bg-slate-200`}>
 
       {store.showEditor && isPc && <div className='px-2 md:px-6' >
         <BlinkoEditor mode='create' key='create-key' onHeightChange={height => {
@@ -41,10 +41,10 @@ const Home = observer(() => {
       </div>}
       {!isPc && <BlinkoAddButton />}
 
-      <LoadingAndEmpty
+      {/* <LoadingAndEmpty
         isLoading={blinko.noteList.isLoading}
         isEmpty={blinko.noteList.isEmpty}
-      />
+      /> */}
 
       {
         !blinko.noteList.isEmpty && <ScrollArea

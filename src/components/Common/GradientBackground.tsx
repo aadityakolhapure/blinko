@@ -3,13 +3,14 @@ import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react';
 import { RootStore } from '@/store/root';
 import { BlinkoStore } from '@/store/blinkoStore';
 import { cn } from '@heroui/react';
+
 interface GradientBackgroundProps {
   children: ReactNode;
   className?: string;
 }
 
 export const GradientBackground = ({ children, className }: GradientBackgroundProps) => {
-  const blinko = RootStore.Get(BlinkoStore)
+  const blinko = RootStore.Get(BlinkoStore);
 
   return (
     <div className={cn("relative w-full h-[100vh]", className)}>
@@ -20,12 +21,12 @@ export const GradientBackground = ({ children, className }: GradientBackgroundPr
         }}
       >
         {
-          blinko.config.value?.customBackgroundUrl ?
+          blinko.config.value?.customBackgroundUrl ? (
             <ShaderGradient
               control='query'
               urlString={blinko.config.value?.customBackgroundUrl}
             />
-            :
+          ) : (
             <ShaderGradient
               type="waterPlane"
               animate={blinko.config.value?.isCloseBackgroundAnimation ? 'off' : 'on'}
@@ -41,9 +42,9 @@ export const GradientBackground = ({ children, className }: GradientBackgroundPr
               rotationX={0}
               rotationY={0}
               rotationZ={235}
-              color1="#4603ff"
-              color2="#FE8989"
-              color3="#000000"
+              color1="#8e2de2"   // Violet
+              color2="#a4508b"   // Purple
+              color3="#ff69b4"   // Pink
               reflection={0.1}
               wireframe={false}
               cAzimuthAngle={180}
@@ -54,6 +55,7 @@ export const GradientBackground = ({ children, className }: GradientBackgroundPr
               envPreset="city"
               grain='off'
             />
+          )
         }
       </ShaderGradientCanvas>
       <div className="relative z-10 w-full h-full">
@@ -61,4 +63,4 @@ export const GradientBackground = ({ children, className }: GradientBackgroundPr
       </div>
     </div>
   );
-}; 
+};

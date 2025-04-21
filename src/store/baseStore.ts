@@ -13,25 +13,25 @@ export class BaseStore implements Store {
   }
   routerList = [
     {
-      title: 'blinko',
+      title: 'Brainwave',
       href: '/',
       shallow: true,
       icon: 'basil:lightning-outline',
     },
     {
-      title: 'notes',
+      title: 'Insights',
       shallow: true,
       href: '/?path=notes',
       icon: 'hugeicons:note',
     },
     {
-      title: 'analytics',
+      title: 'Metrics',
       href: '/analytics',
       hiddenMobile: true,
       icon: 'hugeicons:analytics-01',
     },
     {
-      title: 'resources',
+      title: 'Toolbox',
       href: '/resources',
       icon: 'solar:database-linear',
       hiddenMobile: true,
@@ -152,7 +152,7 @@ export class BaseStore implements Store {
       } else if (router.pathname == '/plugin') {
         this.currentTitle = 'plugin';
       } else if (router.pathname == '/') {
-        this.currentTitle = 'blinko';
+        this.currentTitle = 'brainwave';
       } else {
         this.currentTitle = this.currentRouter?.title ?? '';
       }

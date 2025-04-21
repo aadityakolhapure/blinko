@@ -34,9 +34,9 @@ const MyApp = ({ Component, pageProps }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading) {
-    return <LoadingPage />;
-  }
+  // if (isLoading) {
+  //   return <LoadingPage />;
+  // }
 
   return (
     <>
